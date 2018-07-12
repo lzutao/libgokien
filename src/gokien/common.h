@@ -30,17 +30,29 @@
 /* See more about Visibility in https://gcc.gnu.org/wiki/Visibility */
 #if defined _WIN32 || defined __CYGWIN__
 #    ifdef GOKIEN_DLLEXPORT
-#        define GOKIEN_EXTERN __declspec(dllexport)
+#        ifdef __GNUC__
+#            define GOKIEN_DLL_PUBLIC __attribute__ ((dllexport))
+#        else
+             /* Note: actually gcc seems to also supports this syntax. */
+#            define GOKIEN_DLL_PUBLIC __declspec(dllexport)
+#        endif
 #    else
-#        define GOKIEN_EXTERN __declspec(dllimport)
+#        ifdef __GNUC__
+#            define GOKIEN_DLL_PUBLIC __attribute__ ((dllimport))
+#        else
+             /* Note: actually gcc seems to also supports this syntax. */
+#            define GOKIEN_DLL_PUBLIC __declspec(dllimport)
+#        endif
 #    endif
-#    define GOKIEN_INTERN
-#elif __GNUC__ >= 4
-#    define GOKIEN_EXTERN extern __attribute__((visibility("default")))
-#    define GOKIEN_INTERN extern __attribute__((visibility("hidden")))
+#    define GOKIEN_DLL_LOCAL
 #else
-#    define GOKIEN_EXTERN
-#    define GOKIEN_INTERN
+#    if __GNUC__ >= 4
+#        define GOKIEN_DLL_PUBLIC __attribute__ ((visibility ("default")))
+#        define GOKIEN_DLL_LOCAL  __attribute__ ((visibility ("hidden")))
+#    else
+#        define GOKIEN_DLL_PUBLIC
+#        define GOKIEN_DLL_LOCAL
+#    endif
 #endif
 
 #endif /* GOKIEN_COMMON_H */

@@ -12,13 +12,13 @@ struct GokienCharList {
     struct GokienCharList *next;
 };
 
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_char_list_append(struct GokienCharList **l, struct GokienChar *c);
 
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_char_list_prepend(struct GokienCharList **l, struct GokienChar *c);
 
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_char_list_free(struct GokienCharList *l);
 
 GOKIEN_END_DECL

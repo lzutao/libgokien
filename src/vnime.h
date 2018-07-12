@@ -62,13 +62,13 @@ struct Gokien {
  * Inits a allocated Gokien object.
  * Should call gokien_destroy() when unused.
  */
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_init(struct Gokien *self, uint32_t option_flags);
 
 /*
  * Free all member in object but not the object itself.
  */
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_destroy(struct Gokien *self);
 
 /*
@@ -77,20 +77,20 @@ gokien_destroy(struct Gokien *self);
  *
  * Should call gokien_free() when unused.
  */
-GOKIEN_EXTERN struct Gokien *
+GOKIEN_DLL_PUBLIC struct Gokien *
 gokien_new(uint32_t option_flags);
 
 /*
  * Free all member in Gokien object and itself.
  * It should call gokien_destroy() internally.
  */
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_free(Gokien *self);
 
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_get_characters(Gokien *self, char const *code, struct GokienCharList **l);
 
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_is_input_key(Gokien *self, const char key);
 
 GOKIEN_END_DECL

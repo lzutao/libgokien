@@ -11,12 +11,12 @@ struct GokienChar {
     char code[6];
 };
 
-GOKIEN_EXTERN struct GokienChar *
+GOKIEN_DLL_PUBLIC struct GokienChar *
 gokien_char_new(char const *chchar,
                char const *simpchar,
                char const *code);
 
-GOKIEN_EXTERN int
+GOKIEN_DLL_PUBLIC int
 gokien_char_free(struct GokienChar *c);
 
 GOKIEN_END_DECL
