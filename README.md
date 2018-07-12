@@ -3,10 +3,10 @@
 [![travis-shield]][travis-url]
 [![license-shield]][license-url]
 
-[travis-url]: https://travis-ci.org/Cangjians/libgokien
-[travis-shield]: https://api.travis-ci.org/Cangjians/libgokien.svg?branch=master
+[travis-url]: https://travis-ci.com/lzutao/libgokien
+[travis-shield]: https://api.travis-ci.com/lzutao/libgokien.svg?branch=master
 [license-url]: http://www.gnu.org/licenses/lgpl.html
-[license-shield]: https://img.shields.io/github/license/cangjians/libgokien.svg
+[license-shield]: https://img.shields.io/github/license/lzutao/libgokien.svg
 
 This is a C library implementing the Gokien input method.
 
@@ -49,12 +49,12 @@ int main() {
 ```
 
 For more details, refer to the documentation, either
-[online](http://cangjians.github.io/projects/libgokien/documentation)
+[online](http://lzutao.github.io/projects/libgokien/documentation)
 or the one shipped with this software.
 
-Development happens [on github](https://github.com/Cangjians/libgokien), and
+Development happens [on github](https://github.com/lzutao/libgokien), and
 stable release tarballs can be found in
-[the download section](http://cangjians.github.io/downloads/libgokien/) of
+[the download section](http://lzutao.github.io/downloads/libgokien/) of
 our website.
 
 ## History
@@ -80,7 +80,7 @@ Thank you very much Wan Leung!
 
 ## Legalities
 
-libgokien is offered under the terms of the
+**libgokien** is offered under the terms of the
 [GNU Lesser General Public License, either version 3 or any later version][license-url].
 
 We won't ask you to sign a copyright assignment or any other kind of silly and
